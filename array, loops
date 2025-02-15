@@ -39,3 +39,23 @@ class Program
         Console.WriteLine(max);
     }
 }
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        int n = numbers.Length;
+
+        for (int i = 0; i < n / 2; i++) 
+        {
+            int temp = numbers[i]; 
+            numbers[i] = numbers[n - 1 - i];
+            numbers[n - 1 - i] = temp; 
+        }
+
+        Console.WriteLine("anagram: " + string.Join(", ", numbers));
+    }
+}
